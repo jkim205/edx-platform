@@ -639,7 +639,6 @@ def get_module_system_for_user(
         Returns:
             nothing (but the side effect is that module is re-bound to real_user)
         """
-        from lms.djangoapps.grades.tasks import are_grades_frozen
         if user.is_authenticated:
             err_msg = ("rebind_noauth_module_to_user can only be called from a module bound to "
                        "an anonymous user")
